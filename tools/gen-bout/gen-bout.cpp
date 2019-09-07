@@ -150,8 +150,8 @@ int main(int argc, char *argv[]) {
     }
 
     long nbytes = file_stat.st_size;
-    char filename[7] = "A-data";
-    char statname[12] = "A-data-stat";
+    char filename[7] = "A_data";
+    char statname[12] = "A_data_stat";
 
     unsigned char *file_content, *fptr;
     if ((file_content = (unsigned char *)malloc(nbytes)) == NULL) {
@@ -186,7 +186,7 @@ int main(int argc, char *argv[]) {
     FILE *fp;
     struct stat64 file_stat;
     char filename[6] = "stdin";
-    char statname[11] = "stdin-stat";
+    char statname[11] = "stdin_stat";
 
     if ((fp = fopen(stdin_content_filename, "r")) == NULL ||
         stat64(stdin_content_filename, &file_stat) < 0) {
@@ -225,7 +225,7 @@ int main(int argc, char *argv[]) {
     struct stat64 file_stat;
     unsigned char file_content[1024];
     char filename[7] = "stdout";
-    char statname[12] = "stdout-stat";
+    char statname[12] = "stdout_stat";
 
     if ((fp = fopen(stdout_content_filename, "r")) == NULL ||
         stat64(stdout_content_filename, &file_stat) < 0) {
